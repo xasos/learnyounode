@@ -1,4 +1,4 @@
-learn-you-node
+learnyounode
 ==============
 
 Going through the learnyounode command line tutorial for Node.js.
