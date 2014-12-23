@@ -11,7 +11,7 @@ Going through the learnyounode command line tutorial for Node.js.
 3. [My First I/O](MyFirstIO.js)<br>
 4. [MY First Async I/O](MyFirstAsyncIO.js)<br>
 5. [Filtered LS](FilteredLS.js)<br>
-6. [Make it Modular 1](MakeItModular1.js)[&2](MakeItModular2.js)<br>
+6. [Make it Modular 1](MakeItModular1.js)[ & 2](MakeItModular2.js)<br>
 7. [HTTP Client](HTTPClient.js)<br>
 8. [HTTP Collect](HTTPCollect.js)<br>
 9. [Juggling Async](JugglingAsync.js)<br>
