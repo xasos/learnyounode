@@ -6,12 +6,12 @@ Going through the learnyounode command line tutorial for Node.js.
 **NOTICE**: Not complete, under active development.
 
 ## Activities
-1. [Hello World](HelloWorld.js)
-2.
-3.
-4.
-5.
-6.
+1. [Hello World](HelloWorld.js)<br>
+2. [Baby Steps](HelloWorld.js)<br>
+3. [Hello World](HelloWorld.js)<br>
+4. [Hello World](HelloWorld.js)<br>
+5. [Hello World](HelloWorld.js)<br>
+6. [Hello World](HelloWorld.js)<br>
 
 
 ## Tutorial 
