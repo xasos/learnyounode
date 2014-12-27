@@ -15,8 +15,8 @@ Going through the learnyounode command line tutorial for Node.js.
 7. [HTTP Client](HTTPClient.js)<br>
 8. [HTTP Collect](HTTPCollect.js)<br>
 9. [Juggling Async](JugglingAsync.js)<br>
-10. [Time Server](HelloWorld.js)<br>
-11. [HTTP File Server](HelloWorld.js)<br>
+10. [Time Server](TimeServer.js)<br>
+11. [HTTP File Server](HTTPFileServer.js)<br>
 12. [HTTP Uppercaser](HelloWorld.js)<br>
 13. [HTTP JSON API Server](HelloWorld.js)<br>
 
