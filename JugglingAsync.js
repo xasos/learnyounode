@@ -1,26 +1,21 @@
 var http = require('http');
 var bl = require('bl');
 
-http.get(process.argv[2], function(response) {
-	var str = "";
-	response.setEncoding("utf8");
-	response.pipe(bl(function (err, data) {
-		console.log(data.toString());
-	}));	
-});
+var results = [], count = 0;
 
-http.get(process.argv[3], function(response) {
-	var str = "";
-	response.setEncoding("utf8");
-	response.pipe(bl(function (err, data) {
-		console.log(data.toString());
-	}));	
-});
+function printResults () {
+  for (var i = 0; i < 3; i++) console.log(results[i])
+}
 
-http.get(process.argv[4], function(response) {
-	var str = "";
-	response.setEncoding("utf8");
-	response.pipe(bl(function (err, data) {
-		console.log(data.toString());
-	}));	
-});
+function getData(index) {
+  	http.get(process.argv[2 + index], function (request) {
+    	request.pipe(bl(function (err, data) {
+    		if (err) return console.error(data)
+      		results[index] = data.toString()
+      		count++
+      		if (count == 3) printResults()
+		}))
+	})
+}
+
+for (var i = 0; i < 3; i++) getData(i);
