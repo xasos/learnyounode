@@ -19,6 +19,6 @@ function createDate() {
 }
 
 var server = net.createServer(function (socket) {	
-    socket.end(createDate());
+    socket.end(createDate() + "\n");
 });
 server.listen(process.argv[2]);
