@@ -23,4 +23,3 @@ The tutorial can be installed through [npm](https://www.npmjs.org/package/learny
 
 ## License
 [MIT License](LICENSE)
-
