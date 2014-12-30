@@ -1,22 +1,30 @@
 var http = require('http');
 var url = require('url');
 
-var server = http.createServer(function (req, res) {
-	var parsedUrl = url.parse(req.url, true);
-	console.log(parsedUrl);
-	console.log(parsedUrl.pathName);
-	if (parsedUrl.pathName == '/api/parsetime') {
-		res.writeHead(200, { 'Content-Type': 'application/json' });
-		parsedUrl.search.slice(5, 8); //year
-		parsedUrl.search.slice(10, 11); //month
-		parsedUrl.search.slice(13, 14);
+var routes = {
+	"/api/parsetime": function(parsedUrl) {
+		var date = new Date(parsedUrl.query.iso);
+		return {
+			hour: date.getHours(),
+			minute: date.getMinutes(),
+			second: date.getSeconds()
+		};
+	},
+	"/api/unixtime": function(parsedUrl) {
+		var date = new Date(parsedUrl.query.iso);
+		return {unixtime: date.getTime()};
 	}
-	else if (parsedUrl.pathName == '/api/unixtime') {
-		res.writeHead(200, { 'Content-Type': 'application/json' });
-		res.send({ "unixtime": Date.now() });
+}
+
+var server = http.createServer(function (req, res) {
+	parsedUrl = url.parse(req.url, true);
+	resource = routes[parsedUrl.pathname];
+
+	if (resource) {
+		res.writeHead(200, {"Content-Type": "application/json"});
+		res.end(JSON.stringify(resource(parsedUrl)));
 	}
 	else {
-		console.log("error");
 		res.writeHead(404);
 		res.end();
 	}
