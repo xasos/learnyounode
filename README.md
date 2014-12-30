@@ -1,9 +1,7 @@
 learnyounode
 ==============
 
-Going through the learnyounode command line tutorial for Node.js.
-
-**NOTICE**: Not complete, under active development.
+Going through the learnyounode command line tutorial for Node.js. 
 
 ## Activities
 1. [Hello World](HelloWorld.js)<br>
@@ -17,8 +15,8 @@ Going through the learnyounode command line tutorial for Node.js.
 9. [Juggling Async](JugglingAsync.js)<br>
 10. [Time Server](TimeServer.js)<br>
 11. [HTTP File Server](HTTPFileServer.js)<br>
-12. [HTTP Uppercaser](HelloWorld.js)<br>
-13. [HTTP JSON API Server](HelloWorld.js)<br>
+12. [HTTP Uppercaser](HTTPUppercaser.js)<br>
+13. [HTTP JSON API Server](HTTPJSONAPI-Server.js)<br>
 
 ## Tutorial 
 The tutorial can be installed through [npm](https://www.npmjs.org/package/learnyounode) and is found at [nodeschool.io](http://nodeschool.io/#learn-you-node).
